@@ -12,6 +12,7 @@ I will design and make an app that tracks the start/end time, duration, quality,
 
 ### Justification
 
+
 ### Details
 
 ## Success Criteria
