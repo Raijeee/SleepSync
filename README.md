@@ -1,4 +1,4 @@
-# Unit 3: Client project (Ryu Koshiba's sleeping app)
+# Unit 3: Project Client
 
 # Criteria A: Planning
 
