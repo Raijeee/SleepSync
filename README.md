@@ -19,11 +19,13 @@ Out of every programming language, I have chosen to use Python 3.x for numerous 
 KivyMD will be used to construct the graphical user interface (GUI) for the user to navigate throughout the app. I have chosen KivyMD because not only is KivyMD compatible throughout all 3 main operating systems, but also is one of the more simpler GUI language to learn (2). KivyMD’s goal, “to approximate Google's Material Design spec as close as possible without sacrificing ease of use or application performance.” (3) also greatly relates to the clients experience as the GUI is what the client actually sees and a good GUI is always appreciated in every application. Through these reasons, I have come to the conclusion that KivyMD is the most appropriate GUI node for my project. 
 
 ### Why SQLite?
-
-
-### Details
+SQLite is a database engine written in the C language(4) but also comes bundled with Python and can be used in any Python applications without having to install any additional software (5). I am also most familiar with this database structure and console. This will allow me to create the database quickly and will match the client's deadline more effectively. With this flexibility and ease of use, I have decided to use SQLite for this project's database. 
 
 ## Success Criteria
+1. The app must contain a log in screen, registration screen, and a screen to enter sleep data.
+2. The app will record duration, quality, start, and end time of sleep. 
+3. 
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -44,3 +46,7 @@ KivyMD will be used to construct the graphical user interface (GUI) for the user
 2. ResellerClub. "The 6 Best Python GUI Frameworks for Developers." Medium, 18 Oct. 2019, medium.com/teamresellerclub/the-6-best-python-gui-frameworks-for-developers-7a3f1a41ac73. Accessed 28 Mar. 2022.
 
 3. "Kivymd/KivyMD: KivyMD is a Collection of Material Design Compliant Widgets for Use with Kivy, a Framework for Cross-platform, Touch-enabled Graphical Applications. Https://youtube.com/c/KivyMD Https://twitter.com/KivyMD Https://habr.com/ru/users/kivymd Https://stackoverflow.com/tags/kivymd." GitHub, github.com/kivymd/KivyMD. Accessed 28 Mar. 2022.
+
+4. "SQLite Home Page." SQLite, www.sqlite.org/index.html. Accessed 28 Mar. 2022.
+
+5. "How To Use the Sqlite3 Module in Python 3." DigitalOcean – The Developer Cloud, 2 June 2020, www.digitalocean.com/community/tutorials/how-to-use-the-sqlite3-module-in-python-3. Accessed 28 Mar. 2022.
