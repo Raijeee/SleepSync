@@ -22,7 +22,7 @@ KivyMD will be used to construct the graphical user interface (GUI) for the user
 SQLite is a database engine written in the C language(4) but also comes bundled with Python and can be used in any Python applications without having to install any additional software (5). I am also most familiar with this database structure and console. This will allow me to create the database quickly and will match the client's deadline more effectively. With this flexibility and ease of use, I have decided to use SQLite for this project's database. 
 
 ## Success Criteria
-1. The application must contain a log in screen, registration screen, and a screen to enter sleep data.
+1. The application must contain a GUI log in screen, registration screen, and a screen to enter sleep data.
 2. The application will record duration, quality, start, and end time of sleep. 
 3. The application must contain all the data in a database.
 4. The user will be able to input all data through the GUI.
