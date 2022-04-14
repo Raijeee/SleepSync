@@ -48,6 +48,9 @@ SQLite is a database engine written in the C language(4) but also comes bundled 
 ## System Diagram
 
 ![](systemdiagram.png)
+Fig1. System Diagram of the application
+
+The system diagram shows how the application interacts with eachother. The input will be done with a keyboard (input of numbers) and the output will be shown on the screen. The application will be on a computer, which will be inside the MacOS operating system. The app will then be operated via Python version 3.x and executed on Pycharm via the file name, Unit3.py and Unit3.kv. These python files are then connected with a SQL database called Unit3.db. 
 
 ## Wireframe Diagram
 
