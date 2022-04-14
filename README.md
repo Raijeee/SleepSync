@@ -47,6 +47,8 @@ SQLite is a database engine written in the C language(4) but also comes bundled 
 
 ## System Diagram
 
+![](systemdiagram.png)
+
 ## Wireframe Diagram
 
 ## ER Diagram
