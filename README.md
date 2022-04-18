@@ -92,4 +92,6 @@ The system diagram shows how the application interacts with each other. The inpu
 | 17      |                                                             |                                                            |               |                        |           |
 | 18      |                                                             |                                                            |               |                        |           |
 
+# Criteria C:
 
+How to update software
