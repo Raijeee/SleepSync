@@ -65,6 +65,7 @@ ScreenManager:
         size_hint: 0.4,0.07
         icon_left: 'key-variant'
         hint_text: 'Password'
+        password: True
 
     MDRaisedButton:
         text: "Log in"
@@ -135,6 +136,8 @@ ScreenManager:
         size_hint: 0.4,0.07
         icon_left: 'key-variant'
         hint_text: 'Password'
+        password: True
+        password_mask: "●"
 
     MDRaisedButton:
         text: "Register"
@@ -213,13 +216,40 @@ ScreenManager:
     MDCard:
         border_radius: 20
         radius: [15]
-        size_hint: 0.9, 0.9
+        size_hint: 0.95, 0.95
         elevation: 10
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         orientation: "vertical"
         md_bg_color:[1,1,1, 0.4]
 
+    MDLabel:
+        text: "History"
+        font_style:'H2'
+        halign: 'center'
+        pos_hint:{"center_x":0.5, "center_y":0.85}
 
+    MDBoxLayout:
+        orientation: "horizontal"
+        size_hint: 0.8,0.08
+        pos_hint:{"center_x":0.5, "top": 0.2}
+
+    MDRaisedButton:
+        text: "Back"
+        pos_hint: {"center_x":0.2,"center_y":0.09}
+        md_bg_color:app.theme_cls.primary_dark
+        width:root.width*0.4
+        size_hint: 0.2,0.08
+        on_release:
+            root.parent.current = "MainScreen"
+
+    MDRaisedButton:
+        text: "Insert"
+        pos_hint: {"center_x":0.8,"center_y":0.09}
+        md_bg_color:app.theme_cls.primary_dark
+        width:root.width*0.4
+        size_hint: 0.2,0.08
+        on_release:
+            root.parent.current = "InsertScreen"
 
 <InsertScreen>
     FitImage:
@@ -328,4 +358,5 @@ ScreenManager:
         size_hint: 0.15,0.07
         on_release:
             root.parent.current = "MainScreen"
+            
 ```
