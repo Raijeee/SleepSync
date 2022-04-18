@@ -5,9 +5,9 @@ from kivymd.uix.screen import MDScreen
 import random
 from passlib.context import CryptContext
 from kivymd.uix.picker import MDDatePicker
+from kivymd.uix.datatables import MDDataTable
 
-
-# This is the conig of the hashing functions
+# This is the configuration of the hashing functions
 pwd_context = CryptContext(
     schemes=["pbkdf2_sha256"],
     default = 'pbkdf2_sha256',
@@ -17,9 +17,69 @@ pwd_context = CryptContext(
 def encrypt_password(password):
     return pwd_context.hash(password)
 
-# This function is to check if the entered password is correct and decrypts the password in the database
+# This function will convert the entered password to a hashed password and match it with the database
 def verify_password(password, hashed):
     return pwd_context.verify(password, hashed)
+
+# This class handles all the functions and communications with the SQL database
+class my_database_handler:
+    def __init__(self,name):
+        self.name=name
+        self.connection=sqlite3.connect(self.name)
+        self.cursor=self.connection.cursor()
+    def close(self):
+        self.connection.close
+
+    def create(self):
+        self.cursor.execute("""
+                CREATE TABLE if not exists Users(
+                id INTEGER primary key,
+                username VARCHAR(200) not null unique,
+                email VARCHAR(255) not null unique,
+                password VARCHAR(256) not null
+                );
+                """)
+        self.connection.commit()
+
+    def query_user(self,username):
+        self.username=username
+        result = self.cursor.execute(f"select * from USERS where username='{username}';")
+        return result.fetchone()
+
+    def query_password(self,password):
+        self.password=password
+        result = self.cursor.execute(f"select * from USERS where password='{password}';")
+        return result.fetchone()
+
+    def create_new_user(self, email, username, password):
+        self.cursor.execute("INSERT into Users values (?,?,?,?)",
+                            (random.randint(1,1000000), username, email, encrypt_password(password)))
+        self.connection.commit()
+
+    def createsleepdata(self):
+        self.cursor.execute("""
+                CREATE TABLE if not exists SleepData(
+                date VARCHAR(256) not null,
+                duration VARCHAR(256) not null,
+                quality VARCHAR(256) not null,
+                location VARCHAR(256) not null
+                );
+                """)
+        self.connection.commit()
+
+    def create_new_entry(self, date, duration, quality,location):
+        self.cursor.execute("INSERT into SleepData values (?,?,?,?)",
+                            (date, duration, quality, location))
+        self.connection.commit()
+
+    def query_sleep(self):
+        results = self.cursor.execute(f"SELECT * from SleepData;").fetchall()
+        if results:
+            results.append(["","","",""])
+            return results
+        else:
+            return ["", "", "", ""]
+
 
 class LoginScreen(MDScreen):
     def try_login(self):
@@ -43,7 +103,22 @@ class MainScreen(MDScreen):
     pass
 
 class HistoryScreen(MDScreen):
-    pass
+    # This is a class attribute
+    data_tables = None
+    # This will get data from the database
+    def on_pre_enter(self, *args):
+        db=my_database_handler("Project3.db")
+        query = db.query_sleep()
+        db.close()
+
+        self.data_tables = MDDataTable(
+            use_pagination = True,
+            size_hint = (0.9,0.6),
+            pos_hint = {"center_x": 0.5, "top": 0.75},
+            column_data = [("Date", 35), ("Duration / hrs", 35), ("Quality / 10", 35), ("location", 35)],
+            row_data = query
+        )
+        self.add_widget(self.data_tables)
 
 class InsertScreen(MDScreen):
 
@@ -80,56 +155,6 @@ class RegisterScreen(MDScreen):
         self.ids.username.text = ""
         self.ids.password.text = ""
 
-class my_database_handler:
-    def __init__(self,name):
-        self.name=name
-        self.connection=sqlite3.connect(self.name)
-        self.cursor=self.connection.cursor()
-    def close(self):
-        self.connection.close
-
-    def create(self):
-        self.cursor.execute("""
-                CREATE TABLE if not exists Users(
-                id INTEGER primary key,
-                username VARCHAR(200) not null unique,
-                email VARCHAR(255) not null unique,
-                password VARCHAR(256) not null
-                );
-                """)
-        self.connection.commit()
-
-    def query_user(self,username):
-        self.username=username
-        result = self.cursor.execute(f"select * from USERS where username='{username}';")
-        return result.fetchone()
-
-    def query_password(self,password):
-        self.password=password
-        result = self.cursor.execute(f"select * from USERS where password='{password}';")
-        return result.fetchone()
-
-    def create_new_user(self, email, username, password):
-        self.cursor.execute("INSERT into Users values (?,?,?,?)",
-                            (random.randint(1,1000000), username, email, encrypt_password(password)))
-        self.connection.commit()
-
-
-    def createsleepdata(self):
-        self.cursor.execute("""
-                CREATE TABLE if not exists SleepData(
-                date VARCHAR(256) not null,
-                duration VARCHAR(256) not null,
-                quality VARCHAR(256) not null,
-                location VARCHAR(256) not null
-                );
-                """)
-        self.connection.commit()
-
-    def create_new_entry(self, date, duration, quality,location):
-        self.cursor.execute("INSERT into SleepData values (?,?,?,?)",
-                            (date, duration, quality, location))
-        self.connection.commit()
 
 class Project3(MDApp):
     def build(self):
@@ -142,4 +167,5 @@ db=my_database_handler("Project3.db")
 db.create()
 db.createsleepdata()
 Project3().run()
+
 ```
