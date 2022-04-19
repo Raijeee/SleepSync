@@ -90,6 +90,22 @@ Caption
 
 ## Table of data
 
+### Table of User Database
+
+| Id | Username | Password                                                                               | EMail                     |
+|----|----------|----------------------------------------------------------------------------------------|---------------------------|
+| 1  | Raijee   | $pbkdf2-sha256$3000$P2esNWbs3ZvT2tv7f09p7Q$.MbK9t3vowKjfWyqUjc29NEl6nDEV2MMGJj4kTjF91Y | reiji.nishikawa@gmail.com |
+
+Caption
+
+### Table of Sleep Database
+
+| Date       | Duration | Quality | Location |
+|------------|----------|---------|----------|
+| 2022-04-17 | 9        | 8       | Bed      |
+
+Caption
+
 # Test Plan
 
 ## Record of Tasks
