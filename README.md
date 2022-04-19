@@ -57,6 +57,12 @@ The system diagram shows how the application interacts with each other. The inpu
 
 ## Wireframe Diagram
 
+![](wireframe.jpg)
+
+### Fig2. Wireframe Diagram of the GUI
+
+Caption
+
 ## ER Diagram
 
 ## Table of data
