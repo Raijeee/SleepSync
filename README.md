@@ -59,13 +59,13 @@ The system diagram shows how the application interacts with each other. The inpu
 
 Caption
 
-## ER Diagram
+## Flow Diagrams
 
-## Table of data
+## ER Diagram
 
 ## UML Diagram
 
-## Flow Diagrams
+## Table of data
 
 # Test Plan
 
