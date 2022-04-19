@@ -67,16 +67,18 @@ Caption
 Caption
 
 ![](flowchart2.png)
-### Fig3. Login Screen Flow Diagram
+### Fig4. Login Screen Flow Diagram
 
 Caption
 
 ![](flowchart3.png)
-### Fig3. Data insert Screen Flow Diagram
+### Fig5. Data insert Screen Flow Diagram
 
 Caption
 
 ## ER Diagram
+![](erdiagram.png)
+### Fig6. Data insert Screen Flow Diagram
 
 ## UML Diagram
 
