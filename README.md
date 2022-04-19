@@ -83,6 +83,10 @@ Caption
 Caption
 
 ## UML Diagram
+![](umldiagram.png)
+### Fig7. UML Diagram for Application Database
+
+Caption
 
 ## Table of data
 
