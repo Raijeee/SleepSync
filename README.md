@@ -109,29 +109,25 @@ Caption
 # Test Plan
 
 ## Record of Tasks
-
-| Task NO | Planned Action                                              | Planned Outcome                                            | Time estimate | Target completion date | Criterion |
-|---------|-------------------------------------------------------------|------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Interview client (Koshiba Ryu) and record                   | A recorded voice or video recording, uploaded to Github    | 30 minutes    | March 20th             | A         |
-| 2       | Writing the Problem Definition in the repository            | A clear problem definition in Github                       | 20 minutes    | March 20th             | A         |
-| 3       | Writing the design statement in the repository              | A clear design statement that suits the need of the client | 20 minutes    | March 20th             | A         |
-| 4       | Writing all the justification for programs and methods used | A clear justification that suits the client and myself     | 30 minutes    | March 20th             | A         |
-| 5       | Writing all 6 success criterias                             | A clear success criteria that suits the client             | 20 minutes    | March 20th             | A         |
-| 6       |                                                             |                                                            |               |                        |           |
-| 7       |                                                             |                                                            |               |                        |           |
-| 8       |                                                             |                                                            |               |                        |           |
-|         |                                                             |                                                            |               |                        |           |
-| 9       |                                                             |                                                            |               |                        |           |
-| 10      |                                                             |                                                            |               |                        |           |
-| 12      |                                                             |                                                            |               |                        |           |
-|         |                                                             |                                                            |               |                        |           |
-| 13      |                                                             |                                                            |               |                        |           |
-| 14      |                                                             |                                                            |               |                        |           |
-| 15      |                                                             |                                                            |               |                        |           |
-|         |                                                             |                                                            |               |                        |           |
-| 16      |                                                             |                                                            |               |                        |           |
-| 17      |                                                             |                                                            |               |                        |           |
-| 18      |                                                             |                                                            |               |                        |           |
+| Task NO | Planned Action                                                                      | Planned Outcome                                            | Time estimate | Target completion date | Criterion |
+|---------|-------------------------------------------------------------------------------------|------------------------------------------------------------|---------------|------------------------|-----------|
+| 1       | Interview client (Koshiba Ryu) and record                                           | A recorded voice or video recording, uploaded to Github    | 30 minutes    | March 20th             | A         |
+| 2       | Writing the Problem Definition in the repository                                    | A clear problem definition in Github                       | 20 minutes    | March 20th             | A         |
+| 3       | Writing the design statement in the repository                                      | A clear design statement that suits the need of the client | 20 minutes    | March 20th             | A         |
+| 4       | Writing all the justification for programs and methods used                         | A clear justification that suits the client and myself     | 30 minutes    | March 20th             | A         |
+| 5       | Writing all 6 success criterias                                                     | A clear success criteria that suits the client             | 20 minutes    | March 20th             | A         |
+| 6       | Cite all work used in Criteria A                                                    | MLA format citing at the bottom of Criteria A              | 10 minutes    | March 20th             | A         |
+| 7       | Create system diagram of application                                                | A clear and creative system diagram of the app             | 20 minutes    | March 25th             | B         |
+| 8       | Explain the system diagram                                                          | A brief explanation about the system diagram               | 10 minutes    | March 25th             | B         |
+| 9       | Draw wireframe diagram of GUI                                                       | A clear and creative wireframe diagram of the GUI          | 20 minutes    | March 25th             | B         |
+| 10      | Explain the wireframe diagram                                                       | A brief explanation about the wireframe                    | 10 minutes    | March 25th             | B         |
+| 12      | Draw 3 flow diagrams of 3 functions or classes from the application                 | A clear diagram of all 3 flow diagrams                     | 30 minutes    | March 25th             | B         |
+| 13      | Explain all flow diagrams                                                           | A brief explanation about all 3 flow diagrams              | 20 minutes    | March 25th             | B         |
+| 14      | Draw an ER diagram of the application                                               | A clear ER diagram of the application                      | 10 minutes    | March 25th             | B         |
+| 15      | Explain the ER diagram                                                              | A brief explanation about the ER diagram                   | 10 minutes    | March 25th             | B         |
+| 16      | Draw the table of data of both databases                                            | A table of the data represented in both databases          | 10 minutes    | March 25th             | B         |
+| 17      | Explain both table of datas                                                         | A brief explanation about both table of datas              | 10 minutes    | March 25th             | B         |
+| 18      | Create a test plan table with 6 tests to check the functionality of the application | A clear test plan with all 6 test plans                    | 60 minutes    | March 30th             | B         |
 
 # Criteria C:
 
