@@ -80,6 +80,8 @@ Caption
 ![](erdiagram.png)
 ### Fig6. Data insert Screen Flow Diagram
 
+Caption
+
 ## UML Diagram
 
 ## Table of data
