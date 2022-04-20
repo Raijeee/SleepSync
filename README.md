@@ -3,7 +3,11 @@
 # Criteria A: Planning
 
 ## Problem definition
-My Roommate, Ryu Koshiba has recently been sleep deprived and wants to understand his sleep pattern throughout the month. To do this, Ryu wants an app developer to create an app that tracks his duration of sleep, date of sleep, quality of sleep, and location of sleep to best understand his sleep pattern. 
+My Roommate, Ryu Koshiba has recently been sleep deprived and wants to understand his sleep pattern throughout the month to prepare himself for his final exams coming up. To do this, Ryu wants an app developer to create an app that tracks his duration of sleep, date of sleep, quality of sleep, and location of sleep to best understand his sleep pattern. He wants an app that has a GUI and has accessible buttons and text boxes so he can input data in a straightforward matter.
+
+- The client is recently sleep deprived
+- The client requires an app that can record and track his sleep duration, date, quality and location.
+- The client requires an app that has a GUI
 
 ## Proposed Solution:
 
