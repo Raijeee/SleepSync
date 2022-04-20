@@ -115,7 +115,7 @@ Caption
 ## Record of Tasks
 | Task NO | Planned Action                                                      | Planned Outcome                                                     | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Interview client (Koshiba Ryu) and record                           | A recorded voice or video recording, uploaded to Github             | 30 minutes    | March 20th             | A         |
+| 1       | Interview client (Koshiba Ryu) and record                           | A record of the interview (email)            | 30 minutes    | March 20th             | A         |
 | 2       | Writing the Problem Definition in the repository                    | A clear problem definition in Github                                | 20 minutes    | March 20th             | A         |
 | 3       | Writing the design statement in the repository                      | A clear design statement that suits the need of the client          | 20 minutes    | March 20th             | A         |
 | 4       | Writing all the justification for programs and methods used         | A clear justification that suits the client and myself              | 30 minutes    | March 20th             | A         |
