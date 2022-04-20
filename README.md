@@ -35,6 +35,10 @@ SQLite is a database engine written in the C language(4) but also comes bundled 
 6. The application must be able to show past inputs of all 4 attributes (date, duration, quality and location) from the database via the GUI.
 7. The application must contain a log in screen, registration screen, home screen, screen to enter sleep data and screen to view the sleep data; in total 5 unique screens. 
 
+### Client Approval
+
+![](client.png)
+
 ## Works Cited
 
 1. "The 10 Most Popular Programming Languages to Learn in 2021." Northeastern University Graduate Programs, 14 May 2021, www.northeastern.edu/graduate/blog/most-popular-programming-languages/. Accessed 28 Mar. 2022.
@@ -61,36 +65,32 @@ The system diagram shows how the application interacts with each other. The inpu
 ![](wireframe.jpg)
 ### Fig2. Wireframe Diagram of the GUI
 
-Caption
+This Wireframe Diagram shows the generate outline of the GUI of the application. It shows the functionalities of every button planned out to be used in the application and shows all 5 screens of the application. 
 
 ## Flow Diagrams
 
 ![](flowchart1.png)
 ### Fig3. Registration Screen Flow Diagram
 
-Caption
+This is the flowchart of when the user registers their Email, Username, and Password. 
 
 ![](flowchart2.png)
 ### Fig4. Login Screen Flow Diagram
 
-Caption
+This is a flowchart showing how the login screen functions. It shows how the log in screen matches all the text inputs with the creditentials in the database.
 
 ![](flowchart3.png)
 ### Fig5. Data insert Screen Flow Diagram
 
-Caption
+This is a flowchart showing how inputting data into the GUI connects and communicated with the database.
 
 ## ER Diagram
 ![](erdiagram.png)
 ### Fig6. Data insert Screen Flow Diagram
 
-Caption
-
 ## UML Diagram
 ![](umldiagram.png)
 ### Fig7. UML Diagram for Application Database
-
-Caption
 
 ## Table of data
 
