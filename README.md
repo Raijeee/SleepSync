@@ -113,25 +113,34 @@ Caption
 # Test Plan
 
 ## Record of Tasks
-| Task NO | Planned Action                                                                      | Planned Outcome                                            | Time estimate | Target completion date | Criterion |
-|---------|-------------------------------------------------------------------------------------|------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Interview client (Koshiba Ryu) and record                                           | A recorded voice or video recording, uploaded to Github    | 30 minutes    | March 20th             | A         |
-| 2       | Writing the Problem Definition in the repository                                    | A clear problem definition in Github                       | 20 minutes    | March 20th             | A         |
-| 3       | Writing the design statement in the repository                                      | A clear design statement that suits the need of the client | 20 minutes    | March 20th             | A         |
-| 4       | Writing all the justification for programs and methods used                         | A clear justification that suits the client and myself     | 30 minutes    | March 20th             | A         |
-| 5       | Writing all 6 success criterias                                                     | A clear success criteria that suits the client             | 20 minutes    | March 20th             | A         |
-| 6       | Cite all work used in Criteria A                                                    | MLA format citing at the bottom of Criteria A              | 10 minutes    | March 20th             | A         |
-| 7       | Create system diagram of application                                                | A clear and creative system diagram of the app             | 20 minutes    | March 25th             | B         |
-| 8       | Explain the system diagram                                                          | A brief explanation about the system diagram               | 10 minutes    | March 25th             | B         |
-| 9       | Draw wireframe diagram of GUI                                                       | A clear and creative wireframe diagram of the GUI          | 20 minutes    | March 25th             | B         |
-| 10      | Explain the wireframe diagram                                                       | A brief explanation about the wireframe                    | 10 minutes    | March 25th             | B         |
-| 12      | Draw 3 flow diagrams of 3 functions or classes from the application                 | A clear diagram of all 3 flow diagrams                     | 30 minutes    | March 25th             | B         |
-| 13      | Explain all flow diagrams                                                           | A brief explanation about all 3 flow diagrams              | 20 minutes    | March 25th             | B         |
-| 14      | Draw an ER diagram of the application                                               | A clear ER diagram of the application                      | 10 minutes    | March 25th             | B         |
-| 15      | Explain the ER diagram                                                              | A brief explanation about the ER diagram                   | 10 minutes    | March 25th             | B         |
-| 16      | Draw the table of data of both databases                                            | A table of the data represented in both databases          | 10 minutes    | March 25th             | B         |
-| 17      | Explain both table of datas                                                         | A brief explanation about both table of datas              | 10 minutes    | March 25th             | B         |
-| 18      | Create a test plan table with 6 tests to check the functionality of the application | A clear test plan with all 6 test plans                    | 60 minutes    | March 30th             | B         |
+| Task NO | Planned Action                                                      | Planned Outcome                                                     | Time estimate | Target completion date | Criterion |
+|---------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------|------------------------|-----------|
+| 1       | Interview client (Koshiba Ryu) and record                           | A recorded voice or video recording, uploaded to Github             | 30 minutes    | March 20th             | A         |
+| 2       | Writing the Problem Definition in the repository                    | A clear problem definition in Github                                | 20 minutes    | March 20th             | A         |
+| 3       | Writing the design statement in the repository                      | A clear design statement that suits the need of the client          | 20 minutes    | March 20th             | A         |
+| 4       | Writing all the justification for programs and methods used         | A clear justification that suits the client and myself              | 30 minutes    | March 20th             | A         |
+| 5       | Writing all 6 success criterias                                     | A clear success criteria that suits the client                      | 20 minutes    | March 20th             | A         |
+| 6       | Cite all work used in Criteria A                                    | MLA format citing at the bottom of Criteria A                       | 10 minutes    | March 20th             | A         |
+| 7       | Create system diagram of application                                | A clear and creative system diagram of the app                      | 20 minutes    | March 25th             | B         |
+| 8       | Explain the system diagram                                          | A brief explanation about the system diagram                        | 10 minutes    | March 25th             | B         |
+| 9       | Draw wireframe diagram of GUI                                       | A clear and creative wireframe diagram of the GUI                   | 20 minutes    | March 25th             | B         |
+| 10      | Explain the wireframe diagram                                       | A brief explanation about the wireframe                             | 10 minutes    | March 25th             | B         |
+| 11      | Code and create a working log in screen of the app                  | A working log in screen with python or kivyMD with a GUI            | 3 hours       | March 30th             | C         |
+| 12      | Code and create a working registration screen of the app            | A working registration screen with python or kivyMD with a GUI      | 2 hours       | April 3rd              | C         |
+| 13      | Draw 3 flow diagrams of 3 functions or classes from the application | A clear diagram of all 3 flow diagrams                              | 30 minutes    | April 5th              | B         |
+| 14      | Explain all flow diagrams                                           | A brief explanation about all 3 flow diagrams                       | 20 minutes    | April 5th              | B         |
+| 15      | Code and create a working menu screen of the app                    | A working menu screen with python or kivyMD with a GUI              | 2 hours       | April 10th             | C         |
+| 16      | Ensure all databases are correct and connected with the application | A working and connected SQL database                                | 1 hour        | April 12th             | C         |
+| 17      | Draw an ER diagram of the application                               | A clear ER diagram of the application                               | 10 minutes    | April 12               | B         |
+| 18      | Explain the ER diagram                                              | A brief explanation about the ER diagram                            | 10 minutes    | April 12th             | B         |
+| 19      | Draw the table of data of both databases                            | A table of the data represented in both databases                   | 10 minutes    | April 12th             | B         |
+| 20      | Explain both table of datas                                         | A brief explanation about both table of datas                       | 10 minutes    | April 12th             | B         |
+| 21      | Creating a test plan                                                | A clear test plan to ensure the functionality of the application    | 1 hour        | April 12th             | B         |
+| 22      | Create sleep data insert page                                       | A working insert screen with python and kivyMD with a GUI           | 2 hours       | April 15th             | C         |
+| 23      | Create sleep data history page                                      | A working history screen with python and kivyMD with a GUI          | 2 hours       | April 15th             | C         |
+| 24      | Linking the table on the history page with the database             | A working table that show all data from the database as a GUI       | 1 hour        | April 15th             | C         |
+| 25      | Testing all test plans                                              | All test plans successful and functional, debug if necessary        | 3 hours       | April 18th             | C         |
+| 26      | Record video of all success criterias                               | Video evidence of all the success criterias functioning and working | 2 hours       | April 20th             | D         |
 
 # Criteria C:
 
