@@ -277,93 +277,6 @@ This code shows the buttons the users are able to press with their mouse. In thi
     
 # Python Code: 
     
-### Login Logic
-    
-```.py
-#This is the class that relates to the <LoginScreen> in Kivy
-class LoginScreen(MDScreen):
-    def try_login(self):
-        # This function will verify if the entered username and password matches the credientials with the database
-        username=self.ids.username.text
-        password=self.ids.password.text
-        db=my_database_handler("Project3.db")
-        user_id=db.query_user(username=username)
-        if user_id:
-            id, username, email, hashed_password = user_id
-            if verify_password(password=password, hashed=hashed_password):
-                self.parent.current = "MainScreen"
-                self.ids.login_label.text = ""
-                self.ids.username.text = ""
-                self.ids.password.text = ""
-            else:
-                self.ids.login_label.text = "Error: Wrong Password"
-        else:
-            self.ids.login_label.text = "Error: User Does Not Exist"
-```
-
-### Registration Logic
-    
-```.py
-class RegisterScreen(MDScreen):
-    def register(self):
-        email_entered = self.ids.email.text
-        username_entered=self.ids.username.text
-        password_entered=self.ids.password.text
-        db=my_database_handler("Project3.db")
-        db.create_new_user(username=username_entered,email=email_entered,password=password_entered)
-        db.close()
-        self.parent.current="LoginScreen"
-        self.ids.email.text = ""
-        self.ids.username.text = ""
-        self.ids.password.text = ""
-```
-    
-### History Screen Logic
-```.py
-class HistoryScreen(MDScreen):
-    # This is a class attribute
-    data_tables = None
-    # This will get data from the database
-    def on_pre_enter(self, *args):
-        db=my_database_handler("Project3.db")
-        query = db.query_sleep()
-        db.close()
-
-        self.data_tables = MDDataTable(
-            use_pagination = True,
-            size_hint = (0.9,0.6),
-            pos_hint = {"center_x": 0.5, "top": 0.75},
-            column_data = [("Date", 65), ("Duration / hrs", 65), ("Quality / 10", 65), ("location", 75)],
-            row_data = query
-        )
-        self.add_widget(self.data_tables)
-```
-
-###  Inserting Data into the Database (Python to SQL) 
-    
-```.py
-# This is the python logic behind the InsertScreen
-class InsertScreen(MDScreen):
-
-    def on_save(self,instance, value, date_range):
-        # This will identify which part of the textfield corresponds with which variable
-        self.instance=instance
-        self.value=value
-        self.date_range=date_range
-        self.ids.sleep_date.text = str(value)
-
-    def input_sleep(self):
-        # This is the part where the code bridges communcation between python and SQL
-        sleep_date=self.ids.sleep_date.text
-        sleep_duration=self.ids.sleep_duration.text
-        sleep_quality=self.ids.sleep_quality.text
-        sleep_location=self.ids.sleep_location.text
-        db.create_new_entry(date=sleep_date, duration=sleep_duration, quality=sleep_quality,location=sleep_location)
-        db.close()
-        self.ids.input_text.text="Successful!"
-```
-Caption
-    
 ## Database Handler (Python to SQL)
     
 ### Create user database
@@ -402,6 +315,98 @@ def createsleepdata(self):
     self.connection.commit()
 ```
     
+## Class functions that relate to KivyMD screens IDs
+    
+### Login Logic
+    
+```.py
+#This is the class that relates to the <LoginScreen> in Kivy
+class LoginScreen(MDScreen):
+    def try_login(self):
+        # This function will verify if the entered username and password matches the credientials with the database
+        username=self.ids.username.text
+        password=self.ids.password.text
+        db=my_database_handler("Project3.db")
+        user_id=db.query_user(username=username)
+        if user_id:
+            id, username, email, hashed_password = user_id
+            if verify_password(password=password, hashed=hashed_password):
+                self.parent.current = "MainScreen"
+                self.ids.login_label.text = ""
+                self.ids.username.text = ""
+                self.ids.password.text = ""
+            else:
+                self.ids.login_label.text = "Error: Wrong Password"
+        else:
+            self.ids.login_label.text = "Error: User Does Not Exist"
+```
+This is the python code behind the <LoginScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case username and password) and python is able to check the credibility of the inputs by communicating with the database through the query_user and query_password functions. If the username doesnt exist in the database, the KivyMD text will change to "Error: User does not exist" and if the password doesn't match with the username, the KivyMD text will change to "Error: Wrong Password". 
+    
+### Registration Logic
+    
+```.py
+class RegisterScreen(MDScreen):
+    def register(self):
+        email_entered = self.ids.email.text
+        username_entered=self.ids.username.text
+        password_entered=self.ids.password.text
+        db=my_database_handler("Project3.db")
+        db.create_new_user(username=username_entered,email=email_entered,password=password_entered)
+        db.close()
+        self.parent.current="LoginScreen"
+        self.ids.email.text = ""
+        self.ids.username.text = ""
+        self.ids.password.text = ""
+```
+This is the python code behind the <RegisterScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case email, username and password) and python is responsible for communicating with the database and inputting all the data. Since there already are functions that help with inputting all the data into the database, I used the db.create_new_user function to input all the variables into its respectful collumns in the database. 
+    
+###  Inserting Data into the Database (Python to SQL) 
+    
+```.py
+# This is the python logic behind the InsertScreen
+class InsertScreen(MDScreen):
+
+    def on_save(self,instance, value, date_range):
+        # This will identify which part of the textfield corresponds with which variable
+        self.instance=instance
+        self.value=value
+        self.date_range=date_range
+        self.ids.sleep_date.text = str(value)
+
+    def input_sleep(self):
+        # This is the part where the code bridges communcation between python and SQL
+        sleep_date=self.ids.sleep_date.text
+        sleep_duration=self.ids.sleep_duration.text
+        sleep_quality=self.ids.sleep_quality.text
+        sleep_location=self.ids.sleep_location.text
+        db.create_new_entry(date=sleep_date, duration=sleep_duration, quality=sleep_quality,location=sleep_location)
+        db.close()
+        self.ids.input_text.text="Successful!"
+```
+This is the python code behind the <InsertScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case, date, duration, quality and location) and pythgon is responsible for communicating with the database and inputting all the data into the database. Since there are already functions that help with all of this, I used the db.create_new_entry() function to create a new entry into the database. 
+    
+### History Screen Logic
+```.py
+class HistoryScreen(MDScreen):
+    # This is a class attribute
+    data_tables = None
+    # This will get data from the database
+    def on_pre_enter(self, *args):
+        db=my_database_handler("Project3.db")
+        query = db.query_sleep()
+        db.close()
+
+        self.data_tables = MDDataTable(
+            use_pagination = True,
+            size_hint = (0.9,0.6),
+            pos_hint = {"center_x": 0.5, "top": 0.75},
+            column_data = [("Date", 65), ("Duration / hrs", 65), ("Quality / 10", 65), ("location", 75)],
+            row_data = query
+        )
+        self.add_widget(self.data_tables)
+```
+This is the python code behind the <HistoryScreen> in KivyMD. Unlike all the other codes, this one works in reverse and requires data input from the database itsself. So this code uses the db.query_sleep() function which as explained earlier, queries the database with all the information within the "sleepdata" database. Other than that I used the built in KivyMD MDDataTable to create the table itsself, specifying the size, position coloumn and row of the table. 
+
 ## Execute Command
     
 ```.py
@@ -410,7 +415,7 @@ def build(self):
     self.theme_cls.primary_palette = "BlueGray"
     self.theme_cls.theme_style = "Light"
     return
-```
+``` 
     
 ## ScreenShots
 ![](login.png)
