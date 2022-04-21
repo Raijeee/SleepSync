@@ -137,7 +137,6 @@ ScreenManager:
         icon_left: 'key-variant'
         hint_text: 'Password'
         password: True
-        password_mask: "●"
 
     MDRaisedButton:
         text: "Register"
@@ -358,5 +357,5 @@ ScreenManager:
         size_hint: 0.15,0.07
         on_release:
             root.parent.current = "MainScreen"
-            
 ```
+            
