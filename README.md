@@ -149,5 +149,59 @@ Caption
 | 26      | Record video of all success criterias                               | Video evidence of all the success criterias functioning and working | 2 hours       | April 20th             | D         |
 
 # Criteria C:
+### Existing Tools:
+
+- Python 3.x
+- KivyMD
+- Pycharm
+- SQL Lite (database)
+
+## UI insertion screen
+### KivyMD Code:
+```.py
+
+# Screen Setup
+
+ScreenManager:
+    id: scr_manager
+
+    LoginScreen:
+        name: "LoginScreen"
+
+    MainScreen:
+        name: "MainScreen"
+
+    RegisterScreen:
+        name: "RegisterScreen"
+
+    InsertScreen:
+        name: "InsertScreen"
+
+    HistoryScreen:
+        name: "HistoryScreen"
+```
+
+This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in my application I have 5 screens registered in setup. As seen, each screen has its own unique name, which corespond to their functionality in the application. 
+
+## Common KivyMD Code
+
+```.py
+<LoginScreen>
+    FitImage:
+        source: "background_img.jpg"
+
+    MDCard:
+        border_radius: 20
+        radius: [15]
+        size_hint: 0.5, 0.8
+        elevation: 10
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        orientation: "vertical"
+        md_bg_color:[1,1,1, 0.4]
+        ```
+        
+The actual UI is constructed by putting all the elemnts of the GUI underneath the appropriately lablled GUI screen. In this example, the elements of this code is underneath the <LoginScreen> which means that this is the general layout of the login screen. This piece of code is in all 5 screens as it contains the background (FitImage) and the translucent square (MDCard) of the GUI.
+  
+## Login Screen
 
 How to update software
