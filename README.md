@@ -204,9 +204,10 @@ This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in 
 
 The actual UI is constructed by putting all the elemnts of the GUI underneath the appropriately lablled GUI screen. In this example, the elements of this code is underneath the <LoginScreen> which means that this is the general layout of the login screen. This piece of code is in all 5 screens as it contains the background (FitImage) and the translucent square (MDCard) of the GUI.
   
-## MDLabel
+### MDLabel
 
 ```.py
+# Labels and text to guide the user
     MDLabel:
         text: "Login"
         font_style: 'H2'
@@ -231,6 +232,51 @@ The actual UI is constructed by putting all the elemnts of the GUI underneath th
         pos_hint:{"center_x":0.5, "center_y":0.55}
 ```
 These are all under the <LoginScreen> and reprent the actual GUI of the login screen. For instance, MDLabel is used to create a text label so the user can understand what is happening. The text, size, allignment, color and font style is all defined through obvious variables. 
+    
+### MDTextFieldRound
+    
+```.py
+    # This is the text field where the user inputs its data through the keyboard
+    # The text field is rounded for visual purposes.
+    MDTextFieldRound:
+        id: username
+        pos_hint:{"center_x":0.5, "center_y":0.5}
+        size_hint: 0.4,0.07
+        icon_left: 'account-circle'
+        hint_text: 'Username'
+    MDTextFieldRound:
+        id: password
+        pos_hint:{"center_x":0.5, "center_y":0.4}
+        size_hint: 0.4,0.07
+        icon_left: 'key-variant'
+        hint_text: 'Password'
+        password: True
+```
+This piece of code shows the actual text fields the user can input with their keyboard. In this case, I am using a "MDTextFieldRound" which means it is a rounded text field for visual purposes. All definitions, position, size, icon, and hint text are defined through obvious variables. 
+    
+### MDRaisedButton
+    
+```.py
+    MDRaisedButton:
+        text: "Log in"
+        pos_hint: {"center_x":0.5,"center_y":0.3}
+        md_bg_color:app.theme_cls.primary_dark
+        width:root.width*0.4
+        size_hint: 0.25,0.075
+        on_release:
+            root.try_login()
+    MDRaisedButton:
+        text: "Register"
+        pos_hint: {"center_x":0.5,"center_y":0.17}
+        md_bg_color:app.theme_cls.primary_light
+        width:root.width*0.4
+        size_hint: 0.25,0.05
+        on_release:
+            root.parent.current = "RegisterScreen"
+```
+This code shows the buttons the users are able to press with their mouse. In this case, for visual purposes I have chosen to use the "MDRaisedButton" which show a button that is raised. All definitions, text, position, color, and size are defined throguh obvious variables. The on_release function defines what the button actually does when clicked, and in this case it either sends a python command (root.try_login()) or changes the screen to a different one (root.parent.current = "RegisterScreen". 
+    
+    
     
     
     
