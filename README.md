@@ -31,7 +31,7 @@ The application will have an output of a GUI rather than text. This is to meet t
 
 ## Success Criteria
 
-1. The application must have a registration system where the users can register their email, username and password.
+1. The application must have a registration system where the users can register their email, username and password and is saved into the database.
 2. The application must have a working log in system, where all the credentials entered have to match with the database (registered data).
 3. The application must encrypt the users password in the local SQL database.
 4. The application must have a home screen that gives the option to log sleep data, view past data or logout. 
