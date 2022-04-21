@@ -291,6 +291,6 @@ Fig 10. The welcome screen <WelcomeScreen>
 Fig 11. The data input screen <InsertScreen>
     
 ![](history.png)
-Fig 12. The view past data screen <HistoryScreen>
+Fig 12. The historical data screen <HistoryScreen>
     
 How to update software
