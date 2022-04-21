@@ -185,11 +185,10 @@ This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in 
 
 ## Common KivyMD Code
 
-
+```.py
 <LoginScreen>
     FitImage:
         source: "background_img.jpg"
-
     MDCard:
         border_radius: 20
         radius: [15]
