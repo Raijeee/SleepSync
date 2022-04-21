@@ -282,6 +282,7 @@ This code shows the buttons the users are able to press with their mouse. In thi
 ### Create user database
 ```.py
 def create(self):
+    # This function will create the table for the users if it doesnt exist
     self.cursor.execute("""
                 CREATE TABLE if not exists Users(
                 id INTEGER primary key,
@@ -297,15 +298,28 @@ This is the function that creates the database that holds all username, password
 ### Query User:
 ```.py
 def query_user(self,username):
+    # This function will match the credientials of the input with the database Username
     self.username=username
     result = self.cursor.execute(f"select * from USERS where username='{username}';")
     return result.fetchone()
 ```
 This is a function that matches the credientials with the inputted "username" with the databases list of "usernames". It would either return nothing (if no such users were found) or everything relating to that username (password and email). This is executed through Python and the SQL console. 
     
+### Query Password:
+    
+```.py  
+def query_password(self,password):
+    # This function will match the credientials of the input with the database Password
+    self.password=password
+    result = self.cursor.execute(f"select * from USERS where password='{password}';")
+    return result.fetchone()
+```
+This is a function, similarly to query user, matches the credientials with the inputted "password" with the databses list of hashed "passwords". This function will return the password when its entered correctly or nothing when inputted with the wrong one.
+    
 ### Create New User into Database:
 ```.py
 def create_new_user(self, email, username, password):
+    # This function will create a new user that includes email, username and password
     self.cursor.execute("INSERT into Users values (?,?,?,?)",
                         (random.randint(1,1000000), username, email, encrypt_password(password)))
     self.connection.commit()
@@ -404,6 +418,38 @@ class HistoryScreen(MDScreen):
 ```
 This is the python code behind the <HistoryScreen> in KivyMD. Unlike all the other codes, this one works in reverse and requires data input from the database itsself. So this code uses the db.query_sleep() function which as explained earlier, queries the database with all the information within the "sleepdata" database. Other than that I used the built in KivyMD MDDataTable to create the table itsself, specifying the size, position coloumn and row of the table. 
 
+## Ecryption and hashing functions:
+    
+### Hash setup
+    
+```.py
+# This is the configuration of the hashing functions
+pwd_context = CryptContext(
+    schemes=["pbkdf2_sha256"],
+    default = 'pbkdf2_sha256',
+    pbkdf2_sha256__default_rounds=3000
+)
+```
+This is the setup for the hasing and encryption of the passwords and inserted inputs. With the "from passlib.context import CryptContext" I was able to utilize the libary to its fullest extent.
+    
+### Encrypting the password
+    
+```.py
+def encrypt_password(password):
+    # This will encrypt the password
+    return pwd_context.hash(password)
+```
+This function encrypts the password from a standard string to a hashed string. This uses the "from passlib.context import CryptContext" library to encrypt it. 
+    
+### Decrypting the password
+    
+```.py
+# This function will convert the entered password to a hashed password and match it with the database
+def verify_password(password, hashed):
+    return pwd_context.verify(password, hashed)
+```
+This function will decrypt the passwords on the database and match it with the inputted password to see if it mathces. This uses the "from passlib.context import CryptContext" library to decrypt the passwords from the database. 
+    
 ## Execute Command
     
 ```.py
