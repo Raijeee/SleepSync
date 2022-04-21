@@ -185,7 +185,10 @@ This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in 
 
 ## Common KivyMD Code
 
+### General Screen Setup (background)
 ```.py
+
+# Screen of the LoginScreen
 <LoginScreen>
     FitImage:
         source: "background_img.jpg"
@@ -201,6 +204,34 @@ This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in 
 
 The actual UI is constructed by putting all the elemnts of the GUI underneath the appropriately lablled GUI screen. In this example, the elements of this code is underneath the <LoginScreen> which means that this is the general layout of the login screen. This piece of code is in all 5 screens as it contains the background (FitImage) and the translucent square (MDCard) of the GUI.
   
-## Login Screen
+## MDLabel
 
+```.py
+    MDLabel:
+        text: "Login"
+        font_style: 'H2'
+        halign: 'center'
+        pos_hint:{"center_x":0.5, "center_y":0.8}
+
+    MDLabel:
+        id: login_label
+        text: "Please enter Username and Password"
+        font_style: 'H6'
+        halign: 'center'
+        size_hint: 0.4,0.07
+        pos_hint:{"center_x":0.5, "center_y":0.65}
+
+    MDLabel:
+        id: login_label
+        text: ""
+        theme_text_color: "Custom"
+        text_color: 1, 0, 0, 1
+        font_style: 'Caption'
+        halign: 'center'
+        pos_hint:{"center_x":0.5, "center_y":0.55}
+```
+These are all under the <LoginScreen> and reprent the actual GUI of the login screen. For instance, MDLabel is used to create a text label so the user can understand what is happening. The text, size, allignment, color and font style is all defined through obvious variables. 
+    
+    
+    
 How to update software
