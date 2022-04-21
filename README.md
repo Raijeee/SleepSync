@@ -118,6 +118,15 @@ This is the basic outline of the database for the sleep inputs.
 
 # Test Plan
 
+| Instruction              | Category     | Input                                                            | Expected Output                                                                      | Description                                                                          | Success Criteria |
+|--------------------------|--------------|------------------------------------------------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|------------------|
+| Test Registration Screen | Unit testing | An input in all 3 fields (email, username and password)          | All 3 attributes inside the database and the password being hashed and encrypted     | This will test if the registration works or not                                      | 1,3              |
+| Test Login Screen        | Unit testing | An input of correct attributes (username, and password)          | A change in screen to the WelcomeScreen                                              | This will test if the Login system works or not                                      | 2                |
+| Test Login Screen        | Unit testing | An input of the wrong attributes (username, and password)        | A text message that says "error"                                                     | This will test if the Login system works or not                                      | 2                |
+| Test Main Screen         | Unit testing | Click all 3 buttons shown on the Main Screen                     | All 3 buttons result in their respective pages they are titles with                  | This will test if the MainScreen buttons functions or not                            | 4                |
+| Test Insert Screen       | Unit testing | An input of all 4 fields (Date, Duration, Quality, and Location) | All 4 attributes should be in the database and a text output that says "successful!" | This will test if the InputScreen works and is able to communicate with the database | 5                |
+| Test History Screen      | Unit testing | A click on the "History" button in the WelcomeScreen             | A table that shows the outputs of all the inputted data from before                  | This will test if the HistoryScreen works                                            | 6                |
+
 ## Record of Tasks
 | Task NO | Planned Action                                                      | Planned Outcome                                                     | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------------|---------------------------------------------------------------------|---------------|------------------------|-----------|
