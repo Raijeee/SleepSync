@@ -156,8 +156,8 @@ Caption
 - Pycharm
 - SQL Lite (database)
 
-## UI insertion screen
-### KivyMD Code:
+# KivyMD UI code:
+### UI definition screen:
 ```.py
 
 # Screen Setup
