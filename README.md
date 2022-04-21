@@ -255,6 +255,7 @@ This piece of code shows the actual text fields the user can input with their ke
 ### MDRaisedButton
     
 ```.py
+    # Buttons that users can press to execute a set command
     MDRaisedButton:
         text: "Log in"
         pos_hint: {"center_x":0.5,"center_y":0.3}
