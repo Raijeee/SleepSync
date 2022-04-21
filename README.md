@@ -485,5 +485,25 @@ Fig 11. The data input screen <InsertScreen>
 Fig 12. The historical data screen <HistoryScreen>
     
 ## How will software be updated?
+This application is a lifestyle application and unless broken, there will be no other reason to keep the older version of this application. As such, a self updating, online method will make the most sense. Other updates methods such as manual updates are too tedious for the user and requires too much steps for such apps. Therefore I think this software should be updated and pushed out online and should update automatically. As a benchmark, updates should occur atleast once a month to make sure all bugs are patched and the user has the best experience with the application. 
+    
+## Sources Cited 
+### Online resources used to consult and code my application
+    
+"BoxLayout — KivyMD 1.0.0.dev0 Documentation." Welcome to KivyMD’s Documentation! — KivyMD 1.0.0.dev0 Documentation, kivymd.readthedocs.io/en/latest/components/boxlayout/.
+
+"Button — KivyMD 1.0.0.dev0 Documentation." Welcome to KivyMD’s Documentation! — KivyMD 1.0.0.dev0 Documentation, kivymd.readthedocs.io/en/latest/components/button/.
+
+Codemy.com. "Using SQLite3 Database With Kivy - Python Kivy GUI Tutorial #55." YouTube, 10 Aug. 2021, www.youtube.com/watch?v=X2MkC1ru3cQ&ab_channel=Codemy.com.
+
+Codemy. "KivyMD Pagination For Data Tables - Python Kivy GUI Tutorial #54." YouTube, 28 June 2021, www.youtube.com/watch?v=Wk31pSy1g6s&ab_channel=Codemy.com.
+
+"Components — KivyMD 1.0.0.dev0 Documentation." Welcome to KivyMD’s Documentation! — KivyMD 1.0.0.dev0 Documentation, kivymd.readthedocs.io/en/latest/components/.
+
+"Slider — KivyMD 1.0.0.dev0 Documentation." Welcome to KivyMD’s Documentation! — KivyMD 1.0.0.dev0 Documentation, kivymd.readthedocs.io/en/latest/components/slider/.
+
+"Welcome to KivyMD’s Documentation! — KivyMD 1.0.0.dev0 Documentation." Welcome to KivyMD’s Documentation! — KivyMD 1.0.0.dev0 Documentation, kivymd.readthedocs.io/en/latest/.
+    
+    
     
 
