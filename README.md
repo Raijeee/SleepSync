@@ -183,8 +183,6 @@ ScreenManager:
 
 This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in my application I have 5 screens registered in setup. As seen, each screen has its own unique name, which corespond to their functionality in the application. 
 
-## Common KivyMD Code
-
 ### General Screen Setup (background)
 ```.py
 
