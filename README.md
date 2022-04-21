@@ -408,11 +408,17 @@ This is the python code behind the <HistoryScreen> in KivyMD. Unlike all the oth
     
 ```.py
 class Project3(MDApp):
-def build(self):
-    self.theme_cls.primary_palette = "BlueGray"
-    self.theme_cls.theme_style = "Light"
-    return
+    def build(self):
+        self.theme_cls.primary_palette = "BlueGray"
+        self.theme_cls.theme_style = "Light"
+        return
+
+db=my_database_handler("Project3.db")
+db.create()
+db.createsleepdata()
+Project3().run()
 ``` 
+This is the python code behind the execution of my application. 
     
 ## ScreenShots
 ![](login.png)
