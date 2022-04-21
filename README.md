@@ -1,4 +1,4 @@
-# Unit 3: Project Client
+# Unit 3: Client Project (Sleep Tracker Application)
 
 # Criteria A: Planning
 
@@ -12,26 +12,26 @@ My Roommate, Ryu Koshiba has recently been sleep deprived and wants to understan
 ## Proposed Solution:
 
 ### Design Statement
-I will design and make an app that tracks the date, duration, quality (out of 10), and location of sleep for my client who is my roommate, Ryu Koshiba. The application will be able to keep track of all sleep stats via the use of a login system. To ensure security and privacy, the login system will have a hashing system to secure everyones password and will all be saved in a local database using SQLite. The application will have a GUI so that users can easily guide themselves throughout the app with mouse clicks. This all will be created using the Python 3.x language with the help of KivyMD for GUI construction. All code will be created and developed on the application, Pycharm. This app will take 4 weeks to complete and will be evaluated according to the criteria. 
+I will design and make an app that tracks the date, duration, quality (out of 10), and location of sleep for my client who is my roommate, Ryu Koshiba. The application will be able to keep track of all sleep stats via the use of a login system. To ensure security and privacy, the login system will have a hashing system to secure everyone's password and will all be saved in a local database using SQLite. The application will have a GUI so that users can easily guide themselves throughout the app with mouse clicks. This all will be created using the Python 3.x language with the help of KivyMD for GUI construction. All code will be created and developed on the application, Pycharm. This app will take 4 weeks to complete and will be evaluated according to the criteria. 
 
 ## Justification
 
 ### Why Python?
-Out of every programming language, I have chosen to use Python 3.x for numerous reasons. For starters, Python is the most well known and used programming language throughout the world (1). This will not only allow me to have greater access to resources and references but also the app will also be compatible with a greater number of systems, improving the overall experience of the client. Personally I am the most comfortable with programming Python and so not only will everything be streamlined but also the client will receive the app in a timely manner, without any extensions of the due date. Judging by the benefits of both the programmer and client, its safe to say that Python is the right programming language to use for this project. 
+Out of every programming language, I have chosen to use Python 3.x for numerous reasons. For starters, Python is the most well known and used programming language throughout the world (1). This will not only allow me to have greater access to resources and references but also the app will also be compatible with a greater number of systems, improving the overall experience of the client. Personally, I am the most comfortable with programming Python and so not only will everything be streamlined but also the client will receive the app in a timely manner, without any extensions of the due date. Judging by the benefits of both the programmer and client, it's safe to say that Python is the right programming language to use for this project. 
 
 ### Why KivyMD?
-KivyMD will be used to construct the graphical user interface (GUI) for the user to navigate throughout the app. I have chosen KivyMD because not only is KivyMD compatible throughout all 3 main operating systems, but also is one of the more simpler GUI libraries to learn (2). KivyMD’s goal, “to approximate Google's Material Design spec as close as possible without sacrificing ease of use or application performance.” (3) also greatly relates to the clients experience as the GUI is what the client actually sees and a good GUI is always appreciated in every application. KivyMD is also the library I am the most familiar with and will help me as a developer to finish my project on time. Through these reasons, I have come to the conclusion that KivyMD is the most appropriate GUI node for my project. 
+KivyMD will be used to construct the graphical user interface (GUI) for the user to navigate throughout the app. I have chosen KivyMD because not only is KivyMD compatible with all 3 main operating systems, but also is one of the simpler GUI libraries to learn (2). KivyMD’s goal, “to approximate Google's Material Design spec as close as possible without sacrificing ease of use or application performance.” (3) also greatly relates to the client's experience as the GUI is what the client actually sees and a good GUI is always appreciated in every application. KivyMD is also the library I am the most familiar with and will help me as a developer to finish my project on time. For these reasons, I have come to the conclusion that KivyMD is the most appropriate GUI node for my project. 
 
 ### Why SQLite?
-SQLite is a database engine written in the C language(4) but also comes bundled with Python and can be used in any Python applications without having to install any additional software (5). I am also most familiar with this database structure and console which will allow me to create the database quickly and will match the client's deadline more effectively. With this flexibility and ease of use, I have decided to use SQLite for this project's database. 
+SQLite is a database engine written in the C language(4) but also comes bundled with Python and can be used in any Python application without having to install any additional software (5). I am also most familiar with this database structure and console which will allow me to create the database quickly and will match the client's deadline more effectively. With this flexibility and ease of use, I have decided to use SQLite for this project's database. 
 
 ### Why is the output through a GUI?
-The application will have an output of a GUI rather than text. This is to meet the requirement of the client where he requires an application that can not only record and show his sleep data, but do all that through a GUI for ease of use. Due to the clients requirements, I have decided that the output should be through a GUI. 
+The application will have an output of a GUI rather than text. This is to meet the requirement of the client where he requires an application that can not only record and show his sleep data but do all that through a GUI for ease of use. Due to the client's requirements, I have decided that the output should be through a GUI. 
 
 
 ## Success Criteria
 
-1. The application must have a registration system where the users can register their email, username and password and is saved into the database.
+1. The application must have a registration system where the users can register their email, username and password and are saved into the database.
 2. The application must have a working log in system, where all the credentials entered have to match with the database (registered data).
 3. The application must encrypt the users password in the local SQL database.
 4. The application must have a home screen that gives the option to log sleep data, view past data or logout. 
@@ -40,11 +40,11 @@ The application will have an output of a GUI rather than text. This is to meet t
 7. The application must contain a log in screen, registration screen, home screen, screen to enter sleep data and screen to view the sleep data; in total 5 unique screens. 
 
 ### Client Approval
-To check if the client approves my planning and the success critierias, I have decided to email him to verify with him.
+To check if the client approves my planning and the success criteria, I have decided to email him to verify with him.
 
 ![](client2.png)
 
-Now that we have the success criterias verified, we can move on to the coding.
+Now that we have the success criteria verified, we can move on to the coding.
 ## Works Cited
 
 1. "The 10 Most Popular Programming Languages to Learn in 2021." Northeastern University Graduate Programs, 14 May 2021, www.northeastern.edu/graduate/blog/most-popular-programming-languages/. Accessed 28 Mar. 2022.
@@ -71,7 +71,7 @@ The system diagram shows how the application interacts with each other. The inpu
 ![](wireframe.jpg)
 ### Fig2. Wireframe Diagram of the GUI
 
-This Wireframe Diagram shows the generate outline of the GUI of the application. It shows the functionalities of every button planned out to be used in the application and shows all 5 screens of the application. 
+This Wireframe Diagram shows the generated outline of the GUI of the application. It shows the functionalities of every button planned out to be used in the application and shows all 5 screens of the application. 
 
 ## Flow Diagrams
 
@@ -83,7 +83,7 @@ This is the flowchart of when the user registers their Email, Username, and Pass
 ![](flowchart2.png)
 ### Fig4. Login Screen Flow Diagram
 
-This is a flowchart showing how the login screen functions. It shows how the log in screen matches all the text inputs with the creditentials in the database.
+This is a flowchart showing how the login screen functions. It shows how the login screen matches all the text inputs with the credentials in the database.
 
 ![](flowchart3.png)
 ### Fig5. Data insert Screen Flow Diagram
@@ -181,7 +181,7 @@ ScreenManager:
         name: "HistoryScreen"
 ```
 
-This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in my application I have 5 screens registered in setup. As seen, each screen has its own unique name, which corespond to their functionality in the application. 
+This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in my application I have 5 screens registered in setup. As seen, each screen has its own unique name, which corresponds to its functionality in the application. 
 
 ### General Screen Setup (background)
 ```.py
@@ -200,7 +200,7 @@ This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in 
         md_bg_color:[1,1,1, 0.4]
 ```
 
-The actual UI is constructed by putting all the elemnts of the GUI underneath the appropriately lablled GUI screen. In this example, the elements of this code is underneath the <LoginScreen> which means that this is the general layout of the login screen. This piece of code is in all 5 screens as it contains the background (FitImage) and the translucent square (MDCard) of the GUI.
+The actual UI is constructed by putting all the elements of the GUI underneath the appropriately labelled GUI screen. In this example, the elements of this code are underneath the <LoginScreen> which means that this is the general layout of the login screen. This piece of code is in all 5 screens as it contains the background (FitImage) and the translucent square (MDCard) of the GUI.
   
 ### MDLabel
 
@@ -229,7 +229,7 @@ The actual UI is constructed by putting all the elemnts of the GUI underneath th
         halign: 'center'
         pos_hint:{"center_x":0.5, "center_y":0.55}
 ```
-These are all under the <LoginScreen> and reprent the actual GUI of the login screen. For instance, MDLabel is used to create a text label so the user can understand what is happening. The text, size, allignment, color and font style is all defined through obvious variables. 
+These are all under the <LoginScreen> and represent the actual GUI of the login screen. For instance, MDLabel is used to create a text label so the user can understand what is happening. The text, size, alignment, colour and font style are all defined through obvious variables. 
     
 ### MDTextFieldRound
     
@@ -250,7 +250,7 @@ These are all under the <LoginScreen> and reprent the actual GUI of the login sc
         hint_text: 'Password'
         password: True
 ```
-This piece of code shows the actual text fields the user can input with their keyboard. In this case, I am using a "MDTextFieldRound" which means it is a rounded text field for visual purposes. All definitions, position, size, icon, and hint text are defined through obvious variables. 
+This piece of code shows the actual text fields the user can input with their keyboard. In this case, I am using an "MDTextFieldRound" which means it is a rounded text field for visual purposes. All definitions, position, size, icon, and hint text are defined through obvious variables. 
     
 ### MDRaisedButton
     
@@ -273,7 +273,7 @@ This piece of code shows the actual text fields the user can input with their ke
         on_release:
             root.parent.current = "RegisterScreen"
 ```
-This code shows the buttons the users are able to press with their mouse. In this case, for visual purposes I have chosen to use the "MDRaisedButton" which show a button that is raised. All definitions, text, position, color, and size are defined throguh obvious variables. The on_release function defines what the button actually does when clicked, and in this case it either sends a python command (root.try_login()) or changes the screen to a different one (root.parent.current = "RegisterScreen"). 
+This code shows the buttons the users are able to press with their mouse. In this case, for visual purposes, I have chosen to use the "MDRaisedButton" which shows a button that is raised. All definitions, text, position, colour, and size are defined through obvious variables. The on_release function defines what the button actually does when clicked, and in this case, it either sends a python command (root.try_login()) or changes the screen to a different one (root.parent.current = "RegisterScreen"). 
     
 # Python Code: 
     
@@ -293,7 +293,7 @@ def create(self):
                 """)
         self.connection.commit()
 ```
-This is the function that creates the database that holds all username, password and emails. It communicates with the SQL Database through console and uses obvious variables to execute such commands. 
+This is the function that creates the database that holds all username, password and emails. It communicates with the SQL Database through the console and uses obvious variables to execute such commands. 
     
 ### Query User:
 ```.py
@@ -303,7 +303,7 @@ def query_user(self,username):
     result = self.cursor.execute(f"select * from USERS where username='{username}';")
     return result.fetchone()
 ```
-This is a function that matches the credientials with the inputted "username" with the databases list of "usernames". It would either return nothing (if no such users were found) or everything relating to that username (password and email). This is executed through Python and the SQL console. 
+This is a function that matches the credentials with the inputted "username" with the databases list of "usernames". It would either return nothing (if no such users were found) or everything relating to that username (password and email). This is executed through Python and the SQL console. 
     
 ### Query Password:
     
@@ -314,7 +314,7 @@ def query_password(self,password):
     result = self.cursor.execute(f"select * from USERS where password='{password}';")
     return result.fetchone()
 ```
-This is a function, similarly to query user, matches the credientials with the inputted "password" with the databses list of hashed "passwords". This function will return the password when its entered correctly or nothing when inputted with the wrong one.
+This is a function, similarly to query user, matches the credentials with the inputted "password" with the databases list of hashed "passwords". This function will return the password when it's entered correctly or nothing when inputted with the wrong one.
     
 ### Create New User into Database:
 ```.py
@@ -324,7 +324,7 @@ def create_new_user(self, email, username, password):
                         (random.randint(1,1000000), username, email, encrypt_password(password)))
     self.connection.commit()
 ```
-This is a function that adds a new user into the database. It holds 3 variables, Username, Password and Email and requires all 3 to be filled in. An ID is also created to uniquely identify the inidividual users and it will have a random integer between 1 and 1000000. This is executed through Python and the SQL console. 
+This is a function that adds a new user to the database. It holds 3 variables, Username, Password and Email and requires all 3 to be filled in. An ID is also created to uniquely identify the individual users and it will have a random integer between 1 and 1000000. This is executed through Python and the SQL console. 
 
 ## Class functions that relate to KivyMD screens IDs
     
@@ -351,7 +351,7 @@ class LoginScreen(MDScreen):
         else:
             self.ids.login_label.text = "Error: User Does Not Exist"
 ```
-This is the python code behind the <LoginScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case username and password) and python is able to check the credibility of the inputs by communicating with the database through the query_user and query_password functions. If the username doesnt exist in the database, the KivyMD text will change to "Error: User does not exist" and if the password doesn't match with the username, the KivyMD text will change to "Error: Wrong Password". 
+This is the python code behind the <LoginScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case username and password) and python is able to check the credibility of the inputs by communicating with the database through the query_user and query_password functions. If the username doesn't exist in the database, the KivyMD text will change to "Error: User does not exist" and if the password doesn't match with the username, the KivyMD text will change to "Error: Wrong Password". 
     
 ### Registration Logic
     
@@ -369,7 +369,7 @@ class RegisterScreen(MDScreen):
         self.ids.username.text = ""
         self.ids.password.text = ""
 ```
-This is the python code behind the <RegisterScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case email, username and password) and python is responsible for communicating with the database and inputting all the data. Since there already are functions that help with inputting all the data into the database, I used the db.create_new_user function to input all the variables into its respectful collumns in the database. 
+This is the python code behind the <RegisterScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case email, username and password) and python is responsible for communicating with the database and inputting all the data. Since there already are functions that help with inputting all the data into the database, I used the db.create_new_user function to input all the variables into its respectful columns in the database. 
     
 ###  Inserting Data into the Database (Python to SQL) 
     
@@ -394,7 +394,7 @@ class InsertScreen(MDScreen):
         db.close()
         self.ids.input_text.text="Successful!"
 ```
-This is the python code behind the <InsertScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case, date, duration, quality and location) and pythgon is responsible for communicating with the database and inputting all the data into the database. Since there are already functions that help with all of this, I used the db.create_new_entry() function to create a new entry into the database. 
+This is the python code behind the <InsertScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case, date, duration, quality and location) and python is responsible for communicating with the database and inputting all the data into the database. Since there are already functions that help with all of this, I used the db.create_new_entry() function to create a new entry into the database. 
     
 ### History Screen Logic
 ```.py
@@ -416,7 +416,7 @@ class HistoryScreen(MDScreen):
         )
         self.add_widget(self.data_tables)
 ```
-This is the python code behind the <HistoryScreen> in KivyMD. Unlike all the other codes, this one works in reverse and requires data input from the database itsself. So this code uses the db.query_sleep() function which as explained earlier, queries the database with all the information within the "sleepdata" database. Other than that I used the built in KivyMD MDDataTable to create the table itsself, specifying the size, position coloumn and row of the table. 
+This is the python code behind the <HistoryScreen> in KivyMD. Unlike all the other codes, this one works in reverse and requires data input from the database itself. So this code uses the db.query_sleep() function which as explained earlier, queries the database with all the information within the "sleepdata" database. Other than that I used the built-in KivyMD MDDataTable to create the table itself, specifying the size, position column and row of the table. 
 
 ## Ecryption and hashing functions:
     
@@ -430,7 +430,7 @@ pwd_context = CryptContext(
     pbkdf2_sha256__default_rounds=3000
 )
 ```
-This is the setup for the hasing and encryption of the passwords and inserted inputs. With the "from passlib.context import CryptContext" I was able to utilize the libary to its fullest extent.
+This is the setup for the hashing and encryption of the passwords and inserted inputs. With the "from passlib.context import CryptContext" I was able to utilize the library to its fullest extent.
     
 ### Encrypting the password
     
@@ -448,7 +448,7 @@ This function encrypts the password from a standard string to a hashed string. T
 def verify_password(password, hashed):
     return pwd_context.verify(password, hashed)
 ```
-This function will decrypt the passwords on the database and match it with the inputted password to see if it mathces. This uses the "from passlib.context import CryptContext" library to decrypt the passwords from the database. 
+This function will decrypt the passwords on the database and match it with the inputted password to see if it matches. This uses the "from passlib.context import CryptContext" library to decrypt the passwords from the database. 
     
 ## Execute Command
     
@@ -466,7 +466,7 @@ db.createsleepdata()
 # This will run the entire application and execute the commands
 Project3().run()
 ``` 
-This is the python code behind the execution of my application. A theme color of "bluegray" and style of "light" have been specifed in this function to give it color and an overall theme for the application to follow. 
+This is the python code behind the execution of my application. A theme colour of "bluegray" and style of "light" have been specified in this function to give it colour and an overall theme for the application to follow. 
     
 ## ScreenShots
 ![](login.png)
@@ -485,7 +485,7 @@ Fig 11. The data input screen <InsertScreen>
 Fig 12. The historical data screen <HistoryScreen>
     
 ## How will my software be updated in the future?
-This application is a lifestyle application and unless broken, there will be no other reason to keep the older version of this application. As such, a self updating, online method will make the most sense. Other updates methods such as manual updates are too tedious for the user and requires too much steps for such apps. Therefore I think this software should be updated and pushed out online and should update automatically. As a benchmark, updates should occur atleast once a month to make sure all bugs are patched and the user has the best experience with the application. 
+This application is a lifestyle application and unless broken, there will be no other reason to keep the older version of this application. As such, a self-updating, online method will make the most sense. Other updates methods such as manual updates are too tedious for the user and require too many steps for such apps. Therefore I think this software should be updated and pushed out online and should update automatically. As a benchmark, updates should occur at least once a month to make sure all bugs are patched and the user has the best experience with the application. 
     
 ## Sources Cited 
 ### Online resources used to consult and code my application
