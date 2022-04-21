@@ -511,6 +511,6 @@ Codemy. "KivyMD Pagination For Data Tables - Python Kivy GUI Tutorial #54." YouT
     
 https://www.youtube.com/watch?v=kkK07YnLI5c&ab_channel=ReijiNishikawa
 
-Raw Python code:
+Raw Python code: https://github.com/Raijeee/Unit3_Project_Reiji/blob/main/rawpython.md
     
 Raw KivyMD Code: https://github.com/Raijeee/Unit3_Project_Reiji/blob/main/rawkivy.md
