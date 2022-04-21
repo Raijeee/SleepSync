@@ -106,7 +106,7 @@ This is a flowchart showing how inputting data into the GUI connects and communi
 |----|----------|----------------------------------------------------------------------------------------|---------------------------|
 | 1  | Raijee   | password123 | reiji.nishikawa@gmail.com |
 
-Caption
+This is the basic outline of the database for the user inputs.
 
 ### Table of Sleep Database
 
@@ -114,7 +114,7 @@ Caption
 |------------|----------|---------|----------|
 | 2022-04-17 | 9        | 8       | Bed      |
 
-Caption
+This is the basic outline of the database for the sleep inputs. 
 
 # Test Plan
 
