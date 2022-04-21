@@ -275,9 +275,109 @@ This piece of code shows the actual text fields the user can input with their ke
 ```
 This code shows the buttons the users are able to press with their mouse. In this case, for visual purposes I have chosen to use the "MDRaisedButton" which show a button that is raised. All definitions, text, position, color, and size are defined throguh obvious variables. The on_release function defines what the button actually does when clicked, and in this case it either sends a python command (root.try_login()) or changes the screen to a different one (root.parent.current = "RegisterScreen"). 
     
+# Python Code: 
+    
+### Login Logic
+    
+```.py
+#This is the class that relates to the <LoginScreen> in Kivy
+class LoginScreen(MDScreen):
+    def try_login(self):
+        # This function will verify if the entered username and password matches the credientials with the database
+        username=self.ids.username.text
+        password=self.ids.password.text
+        db=my_database_handler("Project3.db")
+        user_id=db.query_user(username=username)
+        if user_id:
+            id, username, email, hashed_password = user_id
+            if verify_password(password=password, hashed=hashed_password):
+                self.parent.current = "MainScreen"
+                self.ids.login_label.text = ""
+                self.ids.username.text = ""
+                self.ids.password.text = ""
+            else:
+                self.ids.login_label.text = "Error: Wrong Password"
+        else:
+            self.ids.login_label.text = "Error: User Does Not Exist"
+```
+
+### Registration Logic
+    
+```.py
+class RegisterScreen(MDScreen):
+    def register(self):
+        email_entered = self.ids.email.text
+        username_entered=self.ids.username.text
+        password_entered=self.ids.password.text
+        db=my_database_handler("Project3.db")
+        db.create_new_user(username=username_entered,email=email_entered,password=password_entered)
+        db.close()
+        self.parent.current="LoginScreen"
+        self.ids.email.text = ""
+        self.ids.username.text = ""
+        self.ids.password.text = ""
+```
+    
+### History Screen Logic
+```.py
+class HistoryScreen(MDScreen):
+    # This is a class attribute
+    data_tables = None
+    # This will get data from the database
+    def on_pre_enter(self, *args):
+        db=my_database_handler("Project3.db")
+        query = db.query_sleep()
+        db.close()
+
+        self.data_tables = MDDataTable(
+            use_pagination = True,
+            size_hint = (0.9,0.6),
+            pos_hint = {"center_x": 0.5, "top": 0.75},
+            column_data = [("Date", 65), ("Duration / hrs", 65), ("Quality / 10", 65), ("location", 75)],
+            row_data = query
+        )
+        self.add_widget(self.data_tables)
+```
+    
+## Database Handler (Python to SQL)
+    
+### Create user database
+```.py
+def create(self):
+    self.cursor.execute("""
+                CREATE TABLE if not exists Users(
+                id INTEGER primary key,
+                username VARCHAR(200) not null unique,
+                email VARCHAR(255) not null unique,
+                password VARCHAR(256) not null
+                );
+                """)
+        self.connection.commit()
+```
+    
+### Query User:
+```.py
+def query_user(self,username):
+    self.username=username
+    result = self.cursor.execute(f"select * from USERS where username='{username}';")
+    return result.fetchone()
+```
+    
+### Create New User into Database:
+```.py
+def createsleepdata(self):
+    self.cursor.execute("""
+            CREATE TABLE if not exists SleepData(
+            date VARCHAR(256) not null,
+            duration VARCHAR(256) not null,
+            quality VARCHAR(256) not null,
+            location VARCHAR(256) not null
+            );
+            """)
+    self.connection.commit()
+```
     
 ## ScreenShots
-    
 ![](login.png)
 Fig 8. The Login Screen <LoginScreen>
     
