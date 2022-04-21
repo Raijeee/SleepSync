@@ -185,7 +185,7 @@ This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in 
 
 ## Common KivyMD Code
 
-```.py
+
 <LoginScreen>
     FitImage:
         source: "background_img.jpg"
@@ -198,7 +198,7 @@ This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in 
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         orientation: "vertical"
         md_bg_color:[1,1,1, 0.4]
-        ```
+
         
 The actual UI is constructed by putting all the elemnts of the GUI underneath the appropriately lablled GUI screen. In this example, the elements of this code is underneath the <LoginScreen> which means that this is the general layout of the login screen. This piece of code is in all 5 screens as it contains the background (FitImage) and the translucent square (MDCard) of the GUI.
   
