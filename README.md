@@ -338,6 +338,31 @@ class HistoryScreen(MDScreen):
         )
         self.add_widget(self.data_tables)
 ```
+
+###  Inserting Data into the Database (Python to SQL) 
+    
+```.py
+# This is the python logic behind the InsertScreen
+class InsertScreen(MDScreen):
+
+    def on_save(self,instance, value, date_range):
+        # This will identify which part of the textfield corresponds with which variable
+        self.instance=instance
+        self.value=value
+        self.date_range=date_range
+        self.ids.sleep_date.text = str(value)
+
+    def input_sleep(self):
+        # This is the part where the code bridges communcation between python and SQL
+        sleep_date=self.ids.sleep_date.text
+        sleep_duration=self.ids.sleep_duration.text
+        sleep_quality=self.ids.sleep_quality.text
+        sleep_location=self.ids.sleep_location.text
+        db.create_new_entry(date=sleep_date, duration=sleep_duration, quality=sleep_quality,location=sleep_location)
+        db.close()
+        self.ids.input_text.text="Successful!"
+```
+Caption
     
 ## Database Handler (Python to SQL)
     
@@ -375,6 +400,16 @@ def createsleepdata(self):
             );
             """)
     self.connection.commit()
+```
+    
+## Execute Command
+    
+```.py
+class Project3(MDApp):
+def build(self):
+    self.theme_cls.primary_palette = "BlueGray"
+    self.theme_cls.theme_style = "Light"
+    return
 ```
     
 ## ScreenShots
