@@ -276,7 +276,21 @@ This piece of code shows the actual text fields the user can input with their ke
 This code shows the buttons the users are able to press with their mouse. In this case, for visual purposes I have chosen to use the "MDRaisedButton" which show a button that is raised. All definitions, text, position, color, and size are defined throguh obvious variables. The on_release function defines what the button actually does when clicked, and in this case it either sends a python command (root.try_login()) or changes the screen to a different one (root.parent.current = "RegisterScreen"). 
     
     
+## ScreenShots
     
+![](login.png)
+Fig 8. The Login Screen <LoginScreen>
     
+![](register.png)
+Fig 9. The registration screen <RegistrationScreen>
+    
+![](welcome.png)
+Fig 10. The welcome screen <WelcomeScreen>
+    
+![](insertion.png)
+Fig 11. The data input screen <InsertScreen>
+    
+![](history.png)
+Fig 12. The view past data screen <HistoryScreen>
     
 How to update software
