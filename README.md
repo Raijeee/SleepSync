@@ -292,6 +292,7 @@ def create(self):
                 """)
         self.connection.commit()
 ```
+This is the function that creates the database that holds all username, password and emails. It communicates with the SQL Database through console and uses obvious variables to execute such commands. 
     
 ### Query User:
 ```.py
@@ -300,21 +301,17 @@ def query_user(self,username):
     result = self.cursor.execute(f"select * from USERS where username='{username}';")
     return result.fetchone()
 ```
+This is a function that matches the credientials with the inputted "username" with the databases list of "usernames". It would either return nothing (if no such users were found) or everything relating to that username (password and email). This is executed through Python and the SQL console. 
     
 ### Create New User into Database:
 ```.py
-def createsleepdata(self):
-    self.cursor.execute("""
-            CREATE TABLE if not exists SleepData(
-            date VARCHAR(256) not null,
-            duration VARCHAR(256) not null,
-            quality VARCHAR(256) not null,
-            location VARCHAR(256) not null
-            );
-            """)
+def create_new_user(self, email, username, password):
+    self.cursor.execute("INSERT into Users values (?,?,?,?)",
+                        (random.randint(1,1000000), username, email, encrypt_password(password)))
     self.connection.commit()
 ```
-    
+This is a function that adds a new user into the database. It holds 3 variables, Username, Password and Email and requires all 3 to be filled in. An ID is also created to uniquely identify the inidividual users and it will have a random integer between 1 and 1000000. This is executed through Python and the SQL console. 
+
 ## Class functions that relate to KivyMD screens IDs
     
 ### Login Logic
