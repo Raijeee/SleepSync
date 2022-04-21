@@ -31,6 +31,7 @@ class my_database_handler:
         self.connection.close
 
     def create(self):
+        # This function will create the table for the users if it doesnt exist
         self.cursor.execute("""
                 CREATE TABLE if not exists Users(
                 id INTEGER primary key,
@@ -42,21 +43,25 @@ class my_database_handler:
         self.connection.commit()
 
     def query_user(self,username):
+        # This function will match the credientials of the input with the database Username
         self.username=username
         result = self.cursor.execute(f"select * from USERS where username='{username}';")
         return result.fetchone()
 
     def query_password(self,password):
+        # This function will match the credientials of the input with the database Password
         self.password=password
         result = self.cursor.execute(f"select * from USERS where password='{password}';")
         return result.fetchone()
 
     def create_new_user(self, email, username, password):
+        # This function will create a new user that includes email, username and password
         self.cursor.execute("INSERT into Users values (?,?,?,?)",
                             (random.randint(1,1000000), username, email, encrypt_password(password)))
         self.connection.commit()
 
     def createsleepdata(self):
+        # This function will create the sleepdata table if not created yet
         self.cursor.execute("""
                 CREATE TABLE if not exists SleepData(
                 date VARCHAR(256) not null,
@@ -68,10 +73,11 @@ class my_database_handler:
         self.connection.commit()
 
     def create_new_entry(self, date, duration, quality,location):
+        # This function will create a new sleep data that include duration, quality location and date
         self.cursor.execute("INSERT into SleepData values (?,?,?,?)",
                             (date, duration, quality, location))
         self.connection.commit()
-
+        # This function will gather all data from the Sleep database and return all of the results
     def query_sleep(self):
         results = self.cursor.execute(f"SELECT * from SleepData;").fetchall()
         if results:
@@ -115,7 +121,7 @@ class HistoryScreen(MDScreen):
             use_pagination = True,
             size_hint = (0.9,0.6),
             pos_hint = {"center_x": 0.5, "top": 0.75},
-            column_data = [("Date", 35), ("Duration / hrs", 35), ("Quality / 10", 35), ("location", 35)],
+            column_data = [("Date", 65), ("Duration / hrs", 65), ("Quality / 10", 65), ("location", 75)],
             row_data = query
         )
         self.add_widget(self.data_tables)
@@ -167,5 +173,4 @@ db=my_database_handler("Project3.db")
 db.create()
 db.createsleepdata()
 Project3().run()
-
 ```
