@@ -42,7 +42,7 @@ The application will have an output of a GUI rather than text. This is to meet t
 ### Client Approval
 To check if the client approves my planning and the success critierias, I have decided to email him to verify with him.
 
-![](client.png)
+![](client1.png)
 
 Now that we have the success criterias verified, we can move on to the coding.
 ## Works Cited
