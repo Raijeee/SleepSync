@@ -455,6 +455,7 @@ This function will decrypt the passwords on the database and match it with the i
 ```.py
 class Project3(MDApp):
     def build(self):
+        # This will define the color and palette of the application
         self.theme_cls.primary_palette = "BlueGray"
         self.theme_cls.theme_style = "Light"
         return
@@ -462,9 +463,10 @@ class Project3(MDApp):
 db=my_database_handler("Project3.db")
 db.create()
 db.createsleepdata()
+# This will run the entire application and execute the commands
 Project3().run()
 ``` 
-This is the python code behind the execution of my application. 
+This is the python code behind the execution of my application. A theme color of "bluegray" and style of "light" have been specifed in this function to give it color and an overall theme for the application to follow. 
     
 ## ScreenShots
 ![](login.png)
@@ -482,4 +484,6 @@ Fig 11. The data input screen <InsertScreen>
 ![](history.png)
 Fig 12. The historical data screen <HistoryScreen>
     
-How to update software
+## How will software be updated?
+    
+
