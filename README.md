@@ -44,7 +44,7 @@ To check if the client approves my planning and the success critierias, I have d
 
 ![](client.png)
 
-Now that we have the success criterias verified, we can move on to the coding journey.
+Now that we have the success criterias verified, we can move on to the coding.
 ## Works Cited
 
 1. "The 10 Most Popular Programming Languages to Learn in 2021." Northeastern University Graduate Programs, 14 May 2021, www.northeastern.edu/graduate/blog/most-popular-programming-languages/. Accessed 28 Mar. 2022.
