@@ -484,7 +484,7 @@ Fig 11. The data input screen <InsertScreen>
 ![](history.png)
 Fig 12. The historical data screen <HistoryScreen>
     
-## How will software be updated?
+## How will my software be updated in the future?
 This application is a lifestyle application and unless broken, there will be no other reason to keep the older version of this application. As such, a self updating, online method will make the most sense. Other updates methods such as manual updates are too tedious for the user and requires too much steps for such apps. Therefore I think this software should be updated and pushed out online and should update automatically. As a benchmark, updates should occur atleast once a month to make sure all bugs are patched and the user has the best experience with the application. 
     
 ## Sources Cited 
