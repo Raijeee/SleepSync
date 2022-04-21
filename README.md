@@ -40,9 +40,11 @@ The application will have an output of a GUI rather than text. This is to meet t
 7. The application must contain a log in screen, registration screen, home screen, screen to enter sleep data and screen to view the sleep data; in total 5 unique screens. 
 
 ### Client Approval
+To check if the client approves my planning and the success critierias, I have decided to email him to verify with him.
 
 ![](client.png)
 
+Now that we have the success criterias verified, we can move on to the coding journey.
 ## Works Cited
 
 1. "The 10 Most Popular Programming Languages to Learn in 2021." Northeastern University Graduate Programs, 14 May 2021, www.northeastern.edu/graduate/blog/most-popular-programming-languages/. Accessed 28 Mar. 2022.
