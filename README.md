@@ -19,8 +19,12 @@ I will design and make an app that tracks the date, duration, quality (out of 10
 ### Why Python?
 Out of every programming language, I have chosen to use Python 3.x for numerous reasons. For starters, Python is the most well known and used programming language throughout the world (1). This will not only allow me to have greater access to resources and references but also the app will also be compatible with a greater number of systems, improving the overall experience of the client. Personally, I am the most comfortable with programming Python and so not only will everything be streamlined but also the client will receive the app in a timely manner, without any extensions of the due date. Judging by the benefits of both the programmer and client, it's safe to say that Python is the right programming language to use for this project. 
 
+Since python is said to be the most well known and user programing language throughout the world (1) future developers will be able to expand and add on to the program I have created. This will not only help future developers but clients as well as they will be able to get an application that is always up to data and with new features, from new perspectives from other developers. 
+
 ### Why KivyMD?
 KivyMD will be used to construct the graphical user interface (GUI) for the user to navigate throughout the app. I have chosen KivyMD because not only is KivyMD compatible with all 3 main operating systems, but also is one of the simpler GUI libraries to learn (2). KivyMD’s goal, “to approximate Google's Material Design spec as close as possible without sacrificing ease of use or application performance.” (3) also greatly relates to the client's experience as the GUI is what the client actually sees and a good GUI is always appreciated in every application. KivyMD is also the library I am the most familiar with and will help me as a developer to finish my project on time. For these reasons, I have come to the conclusion that KivyMD is the most appropriate GUI node for my project. 
+
+
 
 ### Why SQLite?
 SQLite is a database engine written in the C language(4) but also comes bundled with Python and can be used in any Python application without having to install any additional software (5). I am also most familiar with this database structure and console which will allow me to create the database quickly and will match the client's deadline more effectively. With this flexibility and ease of use, I have decided to use SQLite for this project's database. 
