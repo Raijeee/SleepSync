@@ -192,6 +192,8 @@ ScreenManager:
 
 This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in my application I have 5 screens registered in setup. As seen, each screen has its own unique name, which corresponds to its functionality in the application. 
 
+This was the first stages of creating this application, and I honestly was still confused about the whole functionality of KivyMD. So I had to consult my peers and the internet (cited below) to educate myself on how to create the screen manager and gain understanding of how KivyMD works in general.
+
 ### General Screen Setup (background)
 ```.py
 
@@ -210,6 +212,8 @@ This kivyMD code is the backbone setup of the GUI. As I have 5 total screens in 
 ```
 
 The actual UI is constructed by putting all the elements of the GUI underneath the appropriately labelled GUI screen. In this example, the elements of this code are underneath the <LoginScreen> which means that this is the general layout of the login screen. This piece of code is in all 5 screens as it contains the background (FitImage) and the translucent square (MDCard) of the GUI.
+    
+Greating a general screen proved to be a relatively easy task. But there were some challenges regardless. For example, I had to insert a background image to the GUI, which I had to ask my peers on how to do it, and to make it visually more appealing, I have used rounded borders (border_radius) from the KivyMD website. 
   
 ### MDLabel
 
@@ -240,6 +244,8 @@ The actual UI is constructed by putting all the elements of the GUI underneath t
 ```
 These are all under the <LoginScreen> and represent the actual GUI of the login screen. For instance, MDLabel is used to create a text label so the user can understand what is happening. The text, size, alignment, colour and font style are all defined through obvious variables. 
     
+Setting the text color was the most daunting task in this code. At first I didn't know what the 4 digits meant so I asked Dr. Ruben for help, which then he explained that the four digits mean red:green:blue:alpha, alpha being the opacity of the color. This helped me out greatly. 
+    
 ### MDTextFieldRound
     
 ```.py
@@ -260,6 +266,8 @@ These are all under the <LoginScreen> and represent the actual GUI of the login 
         password: True
 ```
 This piece of code shows the actual text fields the user can input with their keyboard. In this case, I am using an "MDTextFieldRound" which means it is a rounded text field for visual purposes. All definitions, position, size, icon, and hint text are defined through obvious variables. 
+    
+The biggest challenge I faced in creating a text field is connecting the python logic with the inputs from KivyMD. With the help of my teacher and the countless resources from the internet (cited below) I was able to use IDs to identify the different text boxes and create an input that python can read. 
     
 ### MDRaisedButton
     
@@ -284,6 +292,8 @@ This piece of code shows the actual text fields the user can input with their ke
 ```
 This code shows the buttons the users are able to press with their mouse. In this case, for visual purposes, I have chosen to use the "MDRaisedButton" which shows a button that is raised. All definitions, text, position, colour, and size are defined through obvious variables. The on_release function defines what the button actually does when clicked, and in this case, it either sends a python command (root.try_login()) or changes the screen to a different one (root.parent.current = "RegisterScreen"). 
     
+Perhaps the biggest headache was the allignment and positioning of the buttons. As I have created boxes within boxes, it was a bit confusing trying to identify the X and Y axis of all the boxes and so I had a hard time visualizing where everything goes. To help solve this issue, I used my iPad to physically visualize what is happening in the screen (such as invisible boxes) and help understand the orientation of all the attributes. 
+    
 # Python Code: 
     
 ## Database Handler (Python to SQL)
@@ -303,6 +313,8 @@ def create(self):
         self.connection.commit()
 ```
 This is the function that creates the database that holds all username, password and emails. It communicates with the SQL Database through the console and uses obvious variables to execute such commands. 
+  
+Creating a function that directly talks to SQL Lite was a pretty straightforward task as the SQL terminal uses english. However, something that I stumbled upon is the fact that the database kept on creating a new database with all the attributes. Later, by comparing my code with my peers and my teachers, I was missing "if not exists" in the code, which fixed the problem. 
     
 ### Query User:
 ```.py
@@ -313,6 +325,8 @@ def query_user(self,username):
     return result.fetchone()
 ```
 This is a function that matches the credentials with the inputted "username" with the databases list of "usernames". It would either return nothing (if no such users were found) or everything relating to that username (password and email). This is executed through Python and the SQL console. 
+    
+Finding a user from the database also required python to talk to the SQL database via console. With a good amount of knoweldge in the SQL console, this didn't really prove to be a hard task, although the return function was a bit confusing as it was returning everyone in the database, but regardless I was able to solve it by trial and error. 
     
 ### Query Password:
     
@@ -325,6 +339,8 @@ def query_password(self,password):
 ```
 This is a function, similarly to query user, matches the credentials with the inputted "password" with the databases list of hashed "passwords". This function will return the password when it's entered correctly or nothing when inputted with the wrong one.
     
+Finding and matching the password also required python to talk to the SQL database. Again, with a good amount of knoweldge with SQL, I didn't have much trouble understanding and coding this. Decrypting the passwords from the database was a challenge though, which I will explain later on. 
+   
 ### Create New User into Database:
 ```.py
 def create_new_user(self, email, username, password):
@@ -334,6 +350,8 @@ def create_new_user(self, email, username, password):
     self.connection.commit()
 ```
 This is a function that adds a new user to the database. It holds 3 variables, Username, Password and Email and requires all 3 to be filled in. An ID is also created to uniquely identify the individual users and it will have a random integer between 1 and 1000000. This is executed through Python and the SQL console. 
+    
+Adding a new user to the database, again requried python to talk with SQL lite through console. However, this proved to be a challenging task as I have realized that throughout my own code, I have been using different variable names. So to fix this, I had to one line by one line change "user" to "username" and "pass" to "password" as it for some reason was different throughout the code, causing this piece of code to not work. At the end, I was able to fix it and the create new user function was able to work. Perhaps next time I could be more mindful with the variable names I use. 
 
 ## Class functions that relate to KivyMD screens IDs
     
@@ -362,6 +380,8 @@ class LoginScreen(MDScreen):
 ```
 This is the python code behind the <LoginScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case username and password) and python is able to check the credibility of the inputs by communicating with the database through the query_user and query_password functions. If the username doesn't exist in the database, the KivyMD text will change to "Error: User does not exist" and if the password doesn't match with the username, the KivyMD text will change to "Error: Wrong Password". 
     
+I had trouble when I had to match credientials with the input from KivyMD. I had to firstly utilize the functions that I have created (eg. verify_password) but what I was stuck on is how to deny logins for someone who inputted the wrong string. To fix this, I have utilized if statements, the first if to verify if the username entered is even in the database (if not it will print "Error: user does not exist") and a second if statement to verify if the password is correct, with the verify_password function. By splitting up the two checks with two if statements, I was able to verify each inputs with the databases credientials. 
+    
 ### Registration Logic
     
 ```.py
@@ -379,6 +399,8 @@ class RegisterScreen(MDScreen):
         self.ids.password.text = ""
 ```
 This is the python code behind the <RegisterScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case email, username and password) and python is responsible for communicating with the database and inputting all the data. Since there already are functions that help with inputting all the data into the database, I used the db.create_new_user function to input all the variables into its respectful columns in the database. 
+    
+A problem I faced when creating the register screen is identifying each id from kivy to its respectful variable names. I firstly had to understand what each variable meant, such as self, id, email, and text which proved to be a easy task as I just had to ask my teacher and peers for assistance. With this, I was able to smoothly work out the rest, and utilize the functions created before to input data to the database. 
     
 ###  Inserting Data into the Database (Python to SQL) 
     
@@ -405,6 +427,8 @@ class InsertScreen(MDScreen):
 ```
 This is the python code behind the <InsertScreen> in KivyMD. KivyMD provides python with all the inputs through its unique ids (in this case, date, duration, quality and location) and python is responsible for communicating with the database and inputting all the data into the database. Since there are already functions that help with all of this, I used the db.create_new_entry() function to create a new entry into the database. 
     
+With all the undertandings of variables (id, self, text, etc) I was able to smoothly and logically workout what to do, utilizing all functions that I had created and creating one as well. All went well here. 
+    
 ### History Screen Logic
 ```.py
 class HistoryScreen(MDScreen):
@@ -425,7 +449,9 @@ class HistoryScreen(MDScreen):
         )
         self.add_widget(self.data_tables)
 ```
-This is the python code behind the <HistoryScreen> in KivyMD. Unlike all the other codes, this one works in reverse and requires data input from the database itself. So this code uses the db.query_sleep() function which as explained earlier, queries the database with all the information within the "sleepdata" database. Other than that I used the built-in KivyMD MDDataTable to create the table itself, specifying the size, position column and row of the table. 
+This is the python code behind the <HistoryScreen> in KivyMD. Unlike all the other codes, this one works in reverse and requires data input from the database itself. So this code uses the db.query_sleep() function which as explained earlier, queries the database with all the information within the "sleepdata" database. Other than that I used the built-in KivyMD MDDataTable to create the table itself, specifying the size, position column and row of the table.
+    
+The most confusing part of this was the creation of the data table. At first, I thought the table will be created using KivyMD, but I was wrong. By reseraching and asking my teacher, I came to the conclusion that the table has to be created on python. By looking at the KivyMD resources website, I was able to craft a table that looked half decent with all the columns and shown data in the table. Importing the data from the database was also a straightforward task as I just had to use the function that I have created earlier. 
 
 ## Ecryption and hashing functions:
     
@@ -441,6 +467,8 @@ pwd_context = CryptContext(
 ```
 This is the setup for the hashing and encryption of the passwords and inserted inputs. With the "from passlib.context import CryptContext" I was able to utilize the library to its fullest extent.
     
+Perhaps this was the most confusing part of this project. I firstly had to understand what hashing and encrypting meant, which led me to a few videos on the internet and guidance from my teacher during class. I also had to understand how to create a hashing function within python, which my teacher explained step by step, which helped me tremendously. 
+    
 ### Encrypting the password
     
 ```.py
@@ -450,6 +478,8 @@ def encrypt_password(password):
 ```
 This function encrypts the password from a standard string to a hashed string. This uses the "from passlib.context import CryptContext" library to encrypt it. 
     
+This was pretty straight forward as I was using the library "CryptContxet" and was able to logically create a function to encrypt certain inputs with the .hash function. 
+    
 ### Decrypting the password
     
 ```.py
@@ -458,6 +488,8 @@ def verify_password(password, hashed):
     return pwd_context.verify(password, hashed)
 ```
 This function will decrypt the passwords on the database and match it with the inputted password to see if it matches. This uses the "from passlib.context import CryptContext" library to decrypt the passwords from the database. 
+    
+I had trouble with this function as I didn't know how to compare the two inputs together. However, with consultance from the library website and my peers, I was able to logically figure out that I needed two attributes in the function, the entered password and the hashed password, and use the .verify function to verify if it matches or not.     
     
 ## Execute Command
     
