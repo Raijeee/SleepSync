@@ -29,6 +29,8 @@ Other alternatives such as Libavg or PyQT do exist when creating  GUI. However, 
 ### Why SQLite?
 SQLite is a database engine written in the C language(4) but also comes bundled with Python and can be used in any Python application without having to install any additional software (5). I am also most familiar with this database structure and console which will allow me to create the database quickly and will match the client's deadline more effectively. With this flexibility and ease of use, I have decided to use SQLite for this project's database. 
 
+Compared to other database applications, SQL lite is cross combatible with a number of programs and operating systems (5) and is relatively simpler, shortening the time to develop a database. These factors will be beneficial to the client as the compatability will ensure the client can access the database through the app from any platform they wish to use and also the application will be able to be developed by future developers swiftly, cosntantly improving the application for the client. 
+
 ### Why is the output through a GUI?
 The application will have an output of a GUI rather than text. This is to meet the requirement of the client where he requires an application that can not only record and show his sleep data but do all that through a GUI for ease of use. Due to the client's requirements, I have decided that the output should be through a GUI. 
 
