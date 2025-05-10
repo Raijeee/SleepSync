@@ -1,4 +1,4 @@
-Client Project: Sleep Sync (Sleep Tracker App)
+# Client Project: Sleep Sync (Sleep Tracker App)
 
 # Criteria A: Planning
 
