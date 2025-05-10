@@ -1,4 +1,4 @@
-# Unit 3: Client Project (Sleep Tracker Application)
+Client Project: Sleep Sync (Sleep Tracker App)
 
 # Criteria A: Planning
 
